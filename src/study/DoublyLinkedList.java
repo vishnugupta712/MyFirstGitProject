@@ -2,6 +2,7 @@ package study;
 import java.util.Scanner;
 
 /*  Class NodeNew  */
+//My first commit
 class NodeNew
 {
     protected int data;
