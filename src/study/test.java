@@ -1,5 +1,6 @@
 package study;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,17 +11,34 @@ import java.util.Map;
 class B extends A{
 	
 }*/
+class Test1
+{
+	int x, y;
+	Test1()
+	{
+		x = 10;
+		y = 20;
+	}
+}
 public class test {
-	//first commit
-		public static void main(String[]args) {
-		// TODO Auto-generated method stub
-		Integer i= new Integer(10);
-		Integer j = 10;
-		System.out.println(i==j );
-		Map<Integer,String>m= new HashMap<Integer,String>();
-		m.put(i, "abc");
-		m.put(j, "xyz");
-		System.out.println(m.size());
-		System.out.println(m.get(i));
+	static BigInteger fib(int n)
+	{
+		BigInteger a = BigInteger.valueOf(0);
+		BigInteger b = BigInteger.valueOf(1);
+		BigInteger c = BigInteger.valueOf(1);
+		for (int j=2 ; j<=n ; j++)
+		{
+			c = a.add(b);
+			a = b;
+			b = c;
 		}
+
+		return (a);
+	}
+	//first commit
+		public static void main(String[]args){
+			int n = 100;
+			System.out.println("Fibonacci of " + n +
+				"th term" + " " +"is" +" " + fib(n));
+}
 }
